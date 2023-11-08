@@ -18,5 +18,11 @@ const { title } = Astro.props;
 	<body>
 		<slot />
 	</body>
+	<style is:global>
+    .dark-mode-transition {
+        transition: all 0.4s ease-in-out;
+    }
+	</style>
 	<script src="script.js" type="module"></script>
+	
 </html>

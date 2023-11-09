@@ -2,6 +2,7 @@
 import About from '../components/About.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import PageSlider from '../components/PageSlider.astro';
 import Tecnologias from '../components/Tecnologias.astro';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -9,7 +10,18 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Welcome to DevCollab.">
 	<Header></Header>
 	<Hero></Hero>
-	<About></About>
+	<About />
 	<Tecnologias></Tecnologias>
+
+	<main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
+		<div class="snap-center">
+			<PageSlider></PageSlider>
+		</div>
+	</main>
 </Layout>
+<style is:global>
+	html{
+		scroll-behavior: smooth;
+	}
+</style>
 

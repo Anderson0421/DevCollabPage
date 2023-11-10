@@ -5,7 +5,6 @@ interface Props {
 }
 const { title } = Astro.props;
 ---
-
 <!doctype html>
 <html lang="en">
 	<head>
@@ -19,10 +18,7 @@ const { title } = Astro.props;
 	<body>
 		<slot />
 	</body>
-	<style is:global>
-    .dark-mode-transition {
-        transition: all 0.4s ease-in-out;
-    }
-	</style>
 	<script src="script.js" type="module"></script>
+	<script src="scroll.js" type="module"></script>
+	<script src="https://unpkg.com/scrollreveal"></script>
 </html>

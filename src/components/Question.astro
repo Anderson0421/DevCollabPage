@@ -5,7 +5,7 @@
 
     const {title} = Astro.props
 ---
-<div class="flex gap-x-2 w-max">
+<div class="flex gap-x-2 w-max" id="Question">
     <div>
         <img class="mt-1.5 dark:hidden" width="20px" src="assets/question.svg" alt="question">
         <img class="mt-1.5 hidden dark:block" width="20px" src="assets/questiondark.svg" alt="question">
@@ -15,3 +15,22 @@
         <p class="w-96 max-sm:w-80 text-gray-700 dark:text-gray-300">Sí, cada licencia brinda acceso a un usuario a todo el contenido de EDteam. Varias personas pueden beneficiarse de la misma licencia, pues podrás rotarla entre los miembros de tu equipo las veces que tú quieras (licencias reasignables).</p>
     </div>
 </div>
+<style >
+    p
+    {
+        animation:  fade linear both;
+        animation-timeline: view();
+        animation-range: entry 50% cover 50%;
+    }
+    @keyframes fade{
+        from {
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        0%{
+            opacity: 0;
+        }
+    }
+</style>

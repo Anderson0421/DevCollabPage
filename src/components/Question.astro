@@ -1,9 +1,10 @@
 ---
     interface Props{
         title : string;
+        descrip : string;
     }
 
-    const {title} = Astro.props
+    const {title,descrip} = Astro.props
 ---
 <div class="flex gap-x-2 w-max" id="Question">
     <div>
@@ -12,7 +13,7 @@
     </div>
     <div class="flex flex-col gap-4">
         <p class="w-96 max-sm:w-80 dark:text-white font-semibold">{title}</p>
-        <p class="w-96 max-sm:w-80 text-gray-700 dark:text-gray-300">Sí, cada licencia brinda acceso a un usuario a todo el contenido . Varias personas pueden beneficiarse de la misma licencia, pues podrás rotarla entre los miembros de tu equipo las veces que tú quieras (licencias reasignables).</p>
+        <p class="w-96 max-sm:w-80 text-gray-700 dark:text-gray-300">{descrip}</p>
     </div>
 </div>
 <style >

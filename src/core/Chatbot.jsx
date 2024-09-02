@@ -12,10 +12,12 @@ const ChatComponent = () => {
   const [countdown, setCountdown] = useState(10);
   const intervalRef = useRef(null);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-
+  const [username,setUsername] = useState("");
   useEffect(() => {
     const storedToken = window.localStorage.getItem("token");
     setToken(storedToken);
+    const storedUsername = window.localStorage.getItem("user");
+    setUsername(storedUsername);
   }, []);
 
   useEffect(() => {
@@ -191,7 +193,7 @@ const ChatComponent = () => {
                   } shadow-md`}
                 >
                   <p className="font-semibold text-sm">
-                    {msg.role === "user" ? "Usuario" : "Asistente"}:
+                    {msg.role === "user" ? username||"" : "Asistente"}:
                   </p>
                   <p className="mt-1">{msg.content}</p>
                 </div>

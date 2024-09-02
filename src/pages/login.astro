@@ -1,0 +1,15 @@
+---
+import About from '../components/About.astro';
+import LoginPage from '../components/login';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to DevCollab.">
+	<LoginPage client:load />
+</Layout>
+<style is:global>
+	html{
+		scroll-behavior: smooth;
+	}
+</style>
+

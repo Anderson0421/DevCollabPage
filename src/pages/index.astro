@@ -1,0 +1,28 @@
+---
+import About from '../components/About.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import PageSlider from '../components/PageSlider.astro';
+import Questions from '../components/Questions.astro';
+import Tecnologias from '../components/Tecnologias.astro';
+import ChatComponent from '../core/Chatbot';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to DevCollab.">
+	<Header />
+	<Hero />
+	<About />
+	<Tecnologias />
+	<PageSlider />
+	<Questions />
+	<Footer />
+	<ChatComponent client:load />
+</Layout>
+<style is:global>
+	html{
+		scroll-behavior: smooth;
+	}
+</style>
+

@@ -1,0 +1,17 @@
+---
+import Card from "./Card.astro";
+
+---
+<section class="dark:bg-gray-900">
+    <div class="container mx-auto p-3">
+        <div class="flex justify-center flex-col items-center">
+                <h1 class="max-sm:text-3xl text-5xl font-bold mb-4 dark:text-gray-200 max-md:text-center">¿Por qué unirse a DevCollab?</h1>
+            <p class="text-lg text-gray-700 mb-10 dark:text-gray-400 text-center mx-10">Imagínate tener en un solo lugar los mejores proyectos y compañeros en el área de TI. DevCollab es una plataforma web en el que podrás realizar proyectos, aprender y aún más, poder generar relaciones profesionales y empresariales, abriéndose grandes oportunidades de trabajo.
+        </div>
+        <div class="flex gap-10 justify-center items-center max-xl:flex-wrap">
+            <Card title="Gestión de tus propios proyectos" imagen="https://edteam-media.s3.amazonaws.com/web/modules/group-plan/features-increment.svg" descripcion="Crea y gestiona tus propios proyectos, integrando reglas como máximos participantes, roles requeridos y datos del proyecto."></Card>
+            <Card title="Conecta con otros usuarios y únete a los proyectos de interés" imagen="https://edteam-media.s3.amazonaws.com/web/modules/group-plan/features-increment.svg" descripcion="Conecta con otros usuarios para realizar proyectos, con la finalidad de ganar conocimiento y experencia."></Card>
+            <Card title="Entrega de certificado al culminar el proyecto" imagen="https://edteam-media.s3.amazonaws.com/web/modules/group-plan/features-increment.svg" descripcion="Consigue tu certificado al culminar el proyecto para anexarlo en tu CV."></Card>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,34 @@
+---
+import Question from "./Question.astro";
+
+---
+
+<section class="pb-20 dark:bg-gray-900">
+    <div class="container mx-auto">
+        <h1 class="text-4xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold text-center dark:text-white pt-20">Preguntas <span class="text-violet-600 dark:text-violet-700">frecuentes</span> </h1>
+        <div class="pt-16 px-0 flex max-sm:pt-8  gap-x-10 gap-y-12 justify-center flex-wrap">
+            <Question title="¿A qué nombre esta el certificado?"  descrip="Si, el certificado sale a nombre de la empresa F5 SOLUTIONS."/>
+            <Question title="¿El proyecto realizado se quedara en la BD?" descrip="Si, en nuestros terminos y condiciones esta la regla de que los proyectos se quedaran en la BD de la empresa." />
+            <Question title="¿Qué es lo que pasaria si no culmino con el proyecto?" descrip="En la plataforma tienes la posibilidad de colocarle fecha fin a tu proyecto por lo tanto, si no lo logras terminar no recibes el certificado." />
+        </div>
+    </div>
+</section>
+<style is:global>
+    h1
+    {
+        animation:  fade linear both;
+        animation-timeline: view();
+        animation-range: entry 50% cover 50%;
+    }
+    @keyframes fade{
+        from {
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        0%{
+            opacity: 0;
+        }
+    }
+</style>

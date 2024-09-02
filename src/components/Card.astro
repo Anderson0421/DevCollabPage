@@ -1,0 +1,15 @@
+---
+    interface Props {
+    title: string;
+    descripcion: string;
+    imagen : string;
+    }
+    const { title, descripcion, imagen } = Astro.props
+---
+<div class="CardsBoxs" id="certificate">
+    <div class="rounded-xl bg-gray-900 text-white dark:bg-gray-800  p-7 w-max flex flex-col items-center">
+        <img class="w-24 h-24 mb-4 max-sm:w-20" src={imagen} alt="imagen">
+        <h1 class="font-bold text-xl mb-4 w-52 text-center">{title}</h1>
+        <p class="w-80 text-center max-sm:w-60">{descripcion}</p>
+    </div>
+</div>

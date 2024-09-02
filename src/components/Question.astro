@@ -1,0 +1,37 @@
+---
+    interface Props{
+        title : string;
+        descrip : string;
+    }
+
+    const {title,descrip} = Astro.props
+---
+<div class="flex gap-x-2 w-max" id="Question">
+    <div>
+        <img class="mt-1.5 dark:hidden" width="20px" src="assets/question.svg" alt="question">
+        <img class="mt-1.5 hidden dark:block" width="20px" src="assets/questiondark.svg" alt="question">
+    </div>
+    <div class="flex flex-col gap-4">
+        <p class="w-96 max-sm:w-80 dark:text-white font-semibold">{title}</p>
+        <p class="w-96 max-sm:w-80 text-gray-700 dark:text-gray-300">{descrip}</p>
+    </div>
+</div>
+<style >
+    p
+    {
+        animation:  fade linear both;
+        animation-timeline: view();
+        animation-range: entry 50% cover 50%;
+    }
+    @keyframes fade{
+        from {
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+        0%{
+            opacity: 0;
+        }
+    }
+</style>

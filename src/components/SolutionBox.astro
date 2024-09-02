@@ -1,0 +1,16 @@
+---
+    interface Props {
+    title: string;
+    descripcion: string;
+    image : string;
+    }
+    const { title, descripcion,image } = Astro.props
+---
+
+
+<div class="hover:scale-105 hover:duration-300 hover:transition-all hover:ease-linear mt-20 shadow-lg border-t-8 border-t-gray-800 w-max p-5 rounded-sm shadow-gray-300 dark:shadow-gray-800 dark:border-t-gray-500 dark:border-t-8">
+    <img width="80px" src={image} alt="imagen" class="max-sm:w-16">
+    <p class="text-lg text-blue-700 font-semibold mb-3 dark:text-blue-600">{title}</p>
+    <p class="w-80 dark:text-gray-300 ">{descripcion}</p>
+</div>
+

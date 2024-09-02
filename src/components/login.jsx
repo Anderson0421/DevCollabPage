@@ -17,6 +17,7 @@ const LoginPage = () => {
         const res = await axios.post('https://chatbot-api-2tzx.onrender.com/login', {email,password});
         if (res.data.access_token) {
             window.localStorage.setItem('token', res.data.access_token);
+            window.localStorage.setItem('user', res.data.user);
             window.location.href = '/';
             }
         }
